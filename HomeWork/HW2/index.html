@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        q {
+            color: blue;
+        }
+        .list li a[href^='https://']
+{
+  color: red;
+}
+.list > li:last-child a {
+  background-color: green;
+}
+.list ul + p {
+  font-size: 26px;
+}
+
+.text-box h3:first-child {
+  color: pink;
+}
+#greycol {
+  color: grey;
+}
+.text-box div p {
+  color: red;
+}
+
+.text-box p:nth-child(7) {
+  color: green;
+}
+.yellow {
+  color: yellow;
+}
+
+.bg-box {
+  height: 800px;
+  background-color: green;
+  background-image: url(https://www.freeiconspng.com/uploads/grass-png-images-pictures-transparent-28.png),
+    url(https://img2.goodfon.ru/wallpaper/big/0/5b/pole-zelen-trava-dom-derevya.jpg),
+    url(https://www.freeiconspng.com/uploads/lamp-png-0.png),
+    url(https://vignette.wikia.nocookie.net/mashaandthebear/images/e/e0/%D0%81%D0%B6%D0%B8%D0%BA.png/revision/latest?cb=20180209130328&path-prefix=ru),
+    url(https://avatanplus.com/files/resources/mid/58eb07b830eab15b56162788.png);
+  background-repeat: repeat-x, no-repeat, repeat-x, repeat-y, repeat-y;
+  background-position: right bottom, center center, left top, left bottom,
+    right top;
+  background-size: 400px 300px, auto, 50px 100px, 50px 50px, 50px 50px;
+}
+    </style>
+</head>
+<body>
+    <div>
+        <header>
+            <q style="color:red">Счастье - это не обладание тем, чего желаешь, а желание того, чем обладаешь.</q>
+        </header>
+        <main>
+            <div class="holder">
+                <h1>Homework2</h1>
+                <ul class="list">
+                    <li>
+                        <a href="#">link1</a>
+                        <ul>
+                            <li><a href="#">link2</a></li>
+                            <li><a href="#">link3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="https://www.youtube.com/">link4</a></li>
+                    <li><a href="https://validator.w3.org/">link5</a></li>
+                    <li><a href="#">link6</a></li>
+                </ul>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, accusamus.</p>
+                <h1>Title</h1>
+                <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+
+            <div class="text-box">
+                <h3>Покрасьте меня в розовый цвет (color:pink).</h3>
+                <p>Данный элемент должен остаться неоформленным.</p>
+                <p id='greycol'>Покрасьте меня в серый цвет (color:grey).</p>
+                <div>Данный элемент должен остаться неоформленным.</div>
+                <div>
+                    <p>Покрасьте меня в красный цвет (color:red).</p>
+                </div>
+                <h3>Данный элемент должен остаться неоформленным.</h3>
+                <p>Покрасьте меня в зеленый цвет (color:green).</p>
+                <p class='yellow'>Покрасьте меня в желтый цвет (color:yellow).</p>
+            </div>
+        </main>
+        <footer>
+        <div class="bg-box"></div>
+        </footer>
+    </div>
+    
+</body>
+</html>

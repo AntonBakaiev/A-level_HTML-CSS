@@ -1,0 +1,219 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  color: black;
+  font-size: 14px;
+  line-height: 1;
+  margin: 0;
+}
+.wrapper {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: top;
+}
+.header {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: -220px;
+  width: 250px;
+  padding: 40px 25px;
+  background: grey;
+  color: aliceblue;
+}
+.header:hover {
+  transition: left 0.3s ease-in-out;
+  left: 0;
+}
+.header:hover::after {
+  opacity: 0;
+  visibility: hidden;
+}
+.header::after {
+  transition: opasity 0.3s ease-in-out;
+  content: attr(data-text);
+  position: absolute;
+  top: 50%;
+  right: -15px;
+  transform: rotate(90deg) translateY(-50%);
+  text-transform: uppercase;
+}
+
+.nav ul {
+  list-style-type: none;
+  padding: 10px 0 10px 20px;
+}
+
+.nav-list li {
+  position: relative;
+}
+
+.nav-list li::before {
+  content: "";
+  position: relative;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-color: rgb(252, 235, 6);
+  border: black 3px solid;
+  margin-right: 10px;
+  transform: translate(0, 15%) scaleY(1) rotate(45deg);
+}
+.nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.nav-list li {
+  margin-bottom: 15px;
+}
+.nav-list a {
+  color: inherit;
+  text-decoration: none;
+}
+.nav-list a:hover {
+  transition: color 0.3s ease-in-out;
+  color: rgb(255, 255, 1);
+}
+
+.conteiner-cards {
+  margin-left: 300px;
+  padding: 10px;
+  position: relative;
+  background-color: #0d5825;
+  width: 600px;
+  height: 600px;
+}
+.quote {
+  color: rgb(248, 249, 250);
+  text-align: center;
+  font-size: 25px;
+}
+.ace1,
+.ace2,
+.ace3 {
+  position: absolute;
+  width: 150px;
+  height: auto;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+.ace1 {
+  bottom: 21%;
+  left: 30%;
+  transform: rotate(-30deg);
+}
+
+.ace1:hover {
+  transform: translateY(-30px) rotate(-30deg);
+}
+.ace2 {
+  bottom: 20%;
+  left: 39%;
+  transform: rotate(-10deg);
+}
+.ace2:hover {
+  transform: translateY(-30px) rotate(-10deg);
+}
+.ace3 {
+  bottom: 16.5%;
+  left: 48%;
+  transform: rotate(10deg);
+}
+.ace3:hover {
+  transform: translateY(-30px) rotate(10deg);
+}
+
+.superimposition {
+  position: relative;
+  margin-left: 300px;
+  margin-top: 20px;
+  width: 600px;
+  height: 600px;
+  border: 2px black solid;
+}
+.square {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+}
+.red {
+  background-color: red;
+  top: 30%;
+  left: 30%;
+  z-index: 1;
+}
+.blue {
+  background-color: blue;
+  top: 40%;
+  left: 40%;
+  z-index: 3;
+}
+.green {
+  background-color: green;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+}
+
+.animation-holder {
+  margin-left: 300px;
+  width: 600px;
+  height: 600px;
+  position: relative;
+}
+
+@keyframes runBox {
+  0% {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: red;
+  }
+  25% {
+    background: blue;
+    position: absolute;
+    left: 0;
+    top: calc(100% - 100px);
+  }
+  50% {
+    background: green;
+    position: absolute;
+    left: calc(100% - 100px);
+    top: calc(100% - 100px);
+  }
+  75% {
+    background: purple;
+    position: absolute;
+    left: calc(100% - 100px);
+    top: 0;
+  }
+  100% {
+    background: red;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
+
+.animation-holder .box {
+  width: 100px;
+  height: 100px;
+  background: red;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: runBox 4s ease-in-out infinite;
+}

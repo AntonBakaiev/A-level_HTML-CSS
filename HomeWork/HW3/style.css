@@ -1,0 +1,53 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.box {
+  max-width: 200px;
+  height: 100px;
+  margin: 10px;
+  padding: 20px;
+  border: solid 2px black;
+  display: flex;
+  align-items: center;
+}
+.cont {
+  box-sizing: content-box;
+}
+
+.bord {
+  box-sizing: border-box;
+}
+.element {
+  width: 350px;
+  height: 220px;
+  padding: 15px 10px 20px 10px;
+  margin-bottom: 30px;
+  border: dashed 2px red;
+  background-color: green;
+}
+
+.block-text {
+  max-width: 1000px;
+}
+.block-text p {
+  text-align: justify;
+}
+.html-img {
+  float: left;
+  margin: 0 30px 30px 0;
+  vertical-align: top;
+}
+.html-css-img {
+  float: right;
+  width: 250px;
+  height: 150px;
+  margin: 2em 0 2em 2em;
+  vertical-align: top;
+}
